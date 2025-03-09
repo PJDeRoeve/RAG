@@ -3,8 +3,7 @@ FROM python:3.11
 WORKDIR /code
 
 COPY libs libs/
-COPY projects/rag/ml_hub projects/rag/ml_hub/
-COPY projects/rag/tests projects/rag/tests
+COPY projects/rag/rag projects/rag/ml_hub/
 COPY projects/rag/poetry.lock projects/rag/
 COPY projects/rag/pyproject.toml projects/rag/
 COPY projects/rag/README.md projects/rag/
@@ -17,7 +16,7 @@ ENV PORT=8080
 EXPOSE $PORT
 
 # Add build arguments
-ARG ML_HUB_SERVICE_ACC
+ARG GCP_SERVICE_ACCOUNT
 ARG ENVIRONMENT
 
 # Project initialization :
