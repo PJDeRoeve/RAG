@@ -12,13 +12,19 @@ from data_access.utils import create_uuid
 
 class Document(FirestoreObject):
     document_name: str
+    content: str
     created_at: datetime
     fact_sheet: str
 
-class DocumentCreate(FirestoreObject):
+class DocumentCreate(FirestoreObjectCreate):
     document_name: str
+    content: str
     fact_sheet: str
     created_at: datetime = Field(default_factory=lambda: datetime.now(UTC))
+    @computed_field
+    @property
+    def id(self) -> uuid.UUID:
+        return create_uuid(self.document_name)
 
 
 class DocumentRetrieval(BaseModel):
