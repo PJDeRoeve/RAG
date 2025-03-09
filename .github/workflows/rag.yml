@@ -1,5 +1,5 @@
 name: RAG
-run-name: ${{ github.actor }} ML HUB ${{ github.ref }} ${{ github.sha }}
+run-name: ${{ github.actor }} RAG ${{ github.ref }} ${{ github.sha }}
 on:
   push:
     paths:
