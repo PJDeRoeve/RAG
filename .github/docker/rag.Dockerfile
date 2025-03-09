@@ -19,7 +19,7 @@ EXPOSE $PORT
 ARG GCP_SERVICE_ACCOUNT
 ARG ENVIRONMENT
 
-# Project initialization :
+# Project initialization    :
 RUN pip install "poetry==$POETRY_VERSION"
 RUN poetry config virtualenvs.create false \
     && poetry install --no-interaction --no-ansi
