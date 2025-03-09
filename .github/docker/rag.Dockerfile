@@ -23,6 +23,6 @@ ARG ENVIRONMENT
 RUN pip install "poetry==$POETRY_VERSION"
 RUN poetry config virtualenvs.create false \
     && poetry install --no-interaction --no-ansi
-
+RuN python3 -m spacy download en_core_web_sm
 
 CMD gunicorn --worker-class uvicorn.workers.UvicornWorker --workers 9 --worker-connections 4000 --bind 0.0.0.0:$PORT  --timeout 0 --preload rag.main:app
