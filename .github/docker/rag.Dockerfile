@@ -3,7 +3,7 @@ FROM python:3.11
 WORKDIR /code
 
 COPY libs libs/
-COPY projects/rag/rag projects/rag/ml_hub/
+COPY projects/rag/rag projects/rag/rag/
 COPY projects/rag/poetry.lock projects/rag/
 COPY projects/rag/pyproject.toml projects/rag/
 COPY projects/rag/README.md projects/rag/
