@@ -20,7 +20,7 @@ router = fastapi.APIRouter()
     response_model=DocumentCreate,
     status_code=fastapi.status.HTTP_201_CREATED,
     description=(
-        "Add document to knowledge base and return the document id (document is a .txt file)"
+        "Add document to knowledge base and return the document"
     ),
 )
 async def add_document(
