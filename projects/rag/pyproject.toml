@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "rag"
+version = "0.1.0"
+description = ""
+authors = ["pj <pieter-jan@storychief.io>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.11,<3.13"
+embed = { path = "../../libs/embed", develop = true }
+data-access = { path = "../../libs/data-access", develop = true }
+fastapi = "^0.115.11"
+pydantic-settings = "^2.8.1"
+uvicorn = "^0.34.0"
+asyncio = "^3.4.3"
+aiohttp = "^3.11.13"
+black = "^25.1.0"
+python-multipart = "^0.0.20"
+langchain = "^0.3.20"
+langchain-openai = "^0.3.7"
+spacy = "^3.8.4"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

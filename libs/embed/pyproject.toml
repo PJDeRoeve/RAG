@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "embed"
+version = "0.1.0"
+description = "Library with wrappers around various APIs to collect embeddings"
+authors = ["Christophe Geudens <christophe@storychief.io>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.11,<3.13"
+aiohttp = "^3.9.2"
+tenacity = "^8.2.3"
+cryptography = "^41.0.6"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.9.1"
+ipykernel = "^6.25.2"
+numpy = "^1.26.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
